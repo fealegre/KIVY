@@ -5,7 +5,7 @@ from kivy.uix.button import Button
 import json
 from pathlib import Path
 
-ARCHIVO = Path("preferencias.json")
+ARCHIVO = Path(__file__).parent / "preferencias.json"
 
 
 class Root(BoxLayout):

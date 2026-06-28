@@ -1,208 +1,79 @@
-# 🧪 Kivy Lab
+# Kivy Lab
 
-<div align="center">
+Proyecto educativo en Python para aprender a crear interfaces gráficas con Kivy mediante ejemplos prácticos, ejercicios y pequeños proyectos.
 
-![Kivy](https://img.shields.io/badge/Kivy-2.x-FF6600?style=for-the-badge&logo=kivy&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
+## Qué contiene este repositorio
 
-**✨ Un laboratorio interactivo para explorar y dominar el framework Kivy desde cero ✨**
+El proyecto está organizado en carpetas temáticas para avanzar de forma progresiva:
 
-</div>
+- [basicos](basicos): introducción a widgets como botones, labels, inputs, checkboxes, sliders y spinners.
+- [callbacks](callbacks): ejemplos de interacción y manejo de eventos.
+- [layouts](layouts): uso de diferentes disposiciones visuales como BoxLayout, GridLayout y FloatLayout.
+- [ejercicio_practica_primer_parcial](ejercicio_practica_primer_parcial): mini aplicaciones de práctica con lógica simple.
+- [almacenamientos](almacenamientos): ejemplos de lectura/escritura de archivos, almacenamiento en SQLite y uso de JSON para guardar preferencias.
 
----
+## Enfoque del proyecto
 
-## 🚀 ¿Qué es esto?
+Este repositorio busca enseñar Kivy de forma práctica, empezando por los conceptos básicos y avanzando hacia aplicaciones más completas. Cada ejemplo está pensado para ser ejecutado por separado y comprender cómo se construye una interfaz gráfica paso a paso.
 
-**Kivy Lab** es una colección progresiva de ejemplos prácticos que te guiarán a través de los fundamentos de **Kivy**, el framework de Python para crear interfaces gráficas multiplataforma (Windows, macOS, Linux, Android, iOS).
+## Ejemplos incluidos
 
-Cada archivo es una pieza de aprendizaje independiente, diseñada para ser leída y ejecutada por separado, con comentarios didácticos que explican _qué_ hace cada línea y _por qué_ funciona así.
+### Básicos
+- [basicos/hello.py](basicos/hello.py): primera app con un mensaje simple.
+- [basicos/buttons.py](basicos/buttons.py): botones y organización básica de la interfaz.
+- [basicos/text_inputs.py](basicos/text_inputs.py): entrada de texto.
+- [basicos/checkboxes.py](basicos/checkboxes.py): casillas de selección.
+- [basicos/sliders.py](basicos/sliders.py): barras deslizantes.
+- [basicos/spinners.py](basicos/spinners.py): listas desplegables.
 
----
+### Interacción y layouts
+- [callbacks/button_callbacks.py](callbacks/button_callbacks.py): eventos y callbacks.
+- [layouts/box_layout_h.py](layouts/box_layout_h.py): distribución horizontal.
+- [layouts/grid_layout.py](layouts/grid_layout.py): diseño tipo grilla.
+- [layouts/float_layout.py](layouts/float_layout.py): posicionamiento libre.
 
-## 🗺️ Mapa de aprendizaje
+### Práctica
+- [ejercicio_practica_primer_parcial/saludo_interactivo.py](ejercicio_practica_primer_parcial/saludo_interactivo.py): app que saluda al usuario.
+- [ejercicio_practica_primer_parcial/contador_clicks.py](ejercicio_practica_primer_parcial/contador_clicks.py): contador de clics.
+- [ejercicio_practica_primer_parcial/calculadora_basica.py](ejercicio_practica_primer_parcial/calculadora_basica.py): calculadora simple.
+- [ejercicio_practica_primer_parcial/conversor_temperaturas.py](ejercicio_practica_primer_parcial/conversor_temperaturas.py): conversor de temperaturas.
 
-```
-📦 KIVY LAB
-├── 🟢 NIVEL 1 — Fundamentos
-│   ├── hello.py              → Tu primera app: "Hola, Mundo!"
-│   ├── text_inputs.py        → Campos de texto con placeholder
-│   └── buttons.py            → Botones en layout vertical
-│
-├── 🟡 NIVEL 2 — Interacción
-│   ├── checkboxes.py         → Casillas de verificación
-│   ├── sliders.py            → Barra deslizante y eventos en vivo
-│   └── spinners.py           → Lista desplegable (select)
-│
-├── 🔵 NIVEL 3 — Eventos y Callbacks
-│   └── callbacks/
-│       └── button_callbacks.py → Cómo enlazar eventos a funciones
-│
-├── 🟣 NIVEL 4 — Layouts (Disposición)
-│   ├── layouts/box_layout_h.py → Disposición horizontal
-│   ├── layouts/grid_layout.py  → Cuadrícula tipo tabla
-│   └── layouts/float_layout.py → Posicionamiento libre y preciso
-│
-└── 🏆 NIVEL 5 — Proyectos prácticos
-    └── ejercicio_practica_parcial/
-        ├── saludo_interactivo.py → App que saluda al usuario
-        ├── contador_clicks.py    → Contador con colores dinámicos
-        └── calculadora_basica.py → Calculadora con validaciones
-```
+### Almacenamiento
+- [almacenamientos/archivos.py](almacenamientos/archivos.py): manejo de archivos de texto.
+- [almacenamientos/bd.py](almacenamientos/bd.py): ejemplo básico con SQLite.
+- [almacenamientos/preferencias.py](almacenamientos/preferencias.py): guardar y cargar preferencias en JSON.
+- [almacenamientos/integracion_minima_SQL.py](almacenamientos/integracion_minima_SQL.py): app de agenda con interfaz mejorada y base de datos.
+- [almacenamientos/integracion_minima_JSON.py](almacenamientos/integracion_minima_JSON.py): ejemplo simple de guardado en JSON.
 
----
+## Requisitos
 
-## 🧠 Conceptos que aprenderás
+- Python 3.9 o superior
+- Kivy
 
-### 🟢 Nivel 1 — Fundamentos
-
-| Concepto                                                   | Archivo          |
-| ---------------------------------------------------------- | ---------------- |
-| `App`, `Label`, `build()`                                  | `hello.py`       |
-| `TextInput`, `hint_text`, `multiline`                      | `text_inputs.py` |
-| `Button`, `BoxLayout`, `orientation`, `padding`, `spacing` | `buttons.py`     |
-
-### 🟡 Nivel 2 — Interacción
-
-| Concepto                                            | Archivo         |
-| --------------------------------------------------- | --------------- |
-| `CheckBox`, `texture_update()`, `Window.clearcolor` | `checkboxes.py` |
-| `Slider`, `bind()`, callbacks de propiedad          | `sliders.py`    |
-| `Spinner`, `values`, selección desplegable          | `spinners.py`   |
-
-### 🔵 Nivel 3 — Eventos
-
-| Concepto                              | Archivo                         |
-| ------------------------------------- | ------------------------------- |
-| `on_press`, `bind()`, `instance.text` | `callbacks/button_callbacks.py` |
-
-### 🟣 Nivel 4 — Layouts
-
-| Concepto                               | Archivo                   |
-| -------------------------------------- | ------------------------- |
-| `orientation="horizontal"`             | `layouts/box_layout_h.py` |
-| `GridLayout`, `cols`, filas y columnas | `layouts/grid_layout.py`  |
-| `FloatLayout`, `pos_hint`, `size_hint` | `layouts/float_layout.py` |
-
-### 🏆 Nivel 5 — Proyectos
-
-| Concepto                                                       | Archivo                                            |
-| -------------------------------------------------------------- | -------------------------------------------------- |
-| Widget personalizado, `bind()`, `strip()`                      | `ejercicio_practica_parcial/saludo_interactivo.py` |
-| `NumericProperty`, patrón reactivo, colores dinámicos          | `ejercicio_practica_parcial/contador_clicks.py`    |
-| Validación de entrada, manejo de errores, `GridLayout` anidado | `ejercicio_practica_parcial/calculadora_basica.py` |
-
----
-
-## ⚡ Cómo empezar
-
-### 1️⃣ Instalar Kivy
+Instala Kivy con:
 
 ```bash
 pip install kivy
 ```
 
-> 🐍 Requiere Python 3.8 o superior.
+## Cómo ejecutar un ejemplo
 
-### 2️⃣ Clonar el repositorio
-
-```bash
-git clone https://github.com/fealegre/KIVY.git
-cd KIVY
-```
-
-### 3️⃣ Ejecutar cualquier ejemplo
+Por ejemplo:
 
 ```bash
-python hello.py          # El clásico "Hola, Mundo!"
-python buttons.py        # Botones interactivos
-python sliders.py        # Deslizador en acción
-
-# O los proyectos completos
-python ejercicio_practica_parcial/saludo_interactivo.py
-python ejercicio_practica_parcial/calculadora_basica.py
+python basicos/hello.py
 ```
 
----
-
-## 🧪 Ejecución rápida de todos los ejemplos
+O una app más completa:
 
 ```bash
-# Nivel 1
-python hello.py && python text_inputs.py && python buttons.py
-
-# Nivel 2
-python checkboxes.py && python sliders.py && python spinners.py
-
-# Nivel 3
-python callbacks/button_callbacks.py
-
-# Nivel 4
-python layouts/box_layout_h.py
-python layouts/grid_layout.py
-python layouts/float_layout.py
-
-# Nivel 5
-python ejercicio_practica_parcial/saludo_interactivo.py
-python ejercicio_practica_parcial/contador_clicks.py
+python "almacenamientos/integracion_minima_SQL.py"
 ```
 
----
+## Objetivo
 
-## 🧩 Lo que hace único a este laboratorio
+Aprender a construir interfaces gráficas con Python y Kivy, integrar lógica de negocio simple y trabajar con almacenamiento local de forma práctica.
 
-| Característica                     | Descripción                                               |
-| ---------------------------------- | --------------------------------------------------------- |
-| 📚 **Progresión natural**          | Cada archivo se construye sobre conceptos del anterior    |
-| 💬 **Código comentado en español** | Explicaciones claras y detalladas línea por línea         |
-| 🎯 **Ejemplos atómicos**           | Cada archivo es autónomo y ejecutable por sí mismo        |
-| 🧪 **Proyectos reales**            | Ejercicios que integran múltiples conceptos               |
-| 🎨 **UI atractiva**                | Colores, layouts y widgets bien diseñados desde el inicio |
+## Autor
 
----
-
-## 📸 Vista previa de los proyectos
-
-```
-┌──────────────────────┐   ┌──────────────────────┐   ┌──────────────────────┐
-│  ¡Hola, Fer! 👋      │   │        🟢             │   │  Calculadora          │
-│                      │   │        42             │   │  ┌──────┐ ┌──────┐   │
-│ [Escribe tu nombre]  │   │   Clics realizados    │   │  │  5   │ │  3   │   │
-│ [    Saludar    ]    │   │  ┌──────┐ ┌────────┐  │   │  └──────┘ └──────┘   │
-│                      │   │  │Sumar │ │Reinic. │  │   │ [+Sumar] [-Restar]   │
-└──────────────────────┘   └──────────────────────┘   │ [*Mult.]  [/Dividir] │
-   Saludo Interactivo            Contador              │  Resultado: 8        │
-                                                        └──────────────────────┘
-                                                             Calculadora
-```
-
----
-
-## 🛠️ Tecnologías
-
-- **[Kivy](https://kivy.org/)** — Framework GUI multiplataforma de código abierto
-- **Python 3** — Lenguaje de programación
-- **Git** — Control de versiones
-
----
-
-## 👨‍💻 Autor
-
-**Fernando Alegre**
-
-[![GitHub](https://img.shields.io/badge/GitHub-fealegre-181717?style=flat-square&logo=github)](https://github.com/fealegre)
-
----
-
-## 📄 Licencia
-
-Este proyecto está bajo la licencia **MIT**.  
-Usa, modifica y comparte libremente.
-
----
-
-<div align="center">
-
-**Hecho con ❤️ y mucho ☕ para la comunidad Python 🐍**
-
-</div>
+Fernando Alegre
