@@ -1,9 +1,9 @@
 from pathlib import Path
 
-from kivy.app import App
+from kivy.app import App, platform
 from kivy.core.window import Window
 from kivy.graphics import Color, Rectangle
-from kivy.metrics import dp
+from kivy.metrics import dp, sp
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.button import Button
 from kivy.uix.gridlayout import GridLayout
@@ -42,7 +42,7 @@ class FormularioAgenda(BoxLayout):
 
         titulo = Label(
             text="Agenda de contactos",
-            font_size=24,
+            font_size=sp(24),
             bold=True,
             size_hint_y=None,
             height=dp(42),
@@ -89,6 +89,9 @@ class FormularioAgenda(BoxLayout):
         botones = BoxLayout(size_hint_y=None, height=dp(46), spacing=dp(12))
         self.btn_cancelar = Button(
             text="Limpiar",
+            padding=[dp(8), dp(8)],
+            height=dp(46),
+            font_size=sp(16),
             background_color=(0.85, 0.35, 0.35, 1),
             color=(1, 1, 1, 1),
         )
@@ -97,6 +100,9 @@ class FormularioAgenda(BoxLayout):
 
         self.btn_guardar = Button(
             text="Guardar",
+            padding=[dp(8), dp(8)],
+            height=dp(46),
+            font_size=sp(16),
             background_color=(0.22, 0.58, 0.86, 1),
             color=(1, 1, 1, 1),
         )
@@ -148,6 +154,10 @@ class FormularioAgenda(BoxLayout):
 class MiApp(App):
     def build(self):
         self.title = "Agenda Kivy"
+        if platform in ("android", "ios"):
+            from kivy.core.window import Window
+
+            Window.maximize()
         return FormularioAgenda()
 
 
