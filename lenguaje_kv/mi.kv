@@ -1,0 +1,17 @@
+<Root>:
+    orientation: "vertical"
+    padding: dp(20)
+    spacing: dp(10)
+    
+    Label:
+        id: mensaje
+        text: "Mensaje inicial"
+        font_size: sp(20)
+
+    Button:
+        text: "Saludar"
+        size_hint_y: None
+        height: dp(48)
+        on_press: root.saludar()
+
+Root:
