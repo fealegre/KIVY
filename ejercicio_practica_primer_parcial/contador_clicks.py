@@ -46,22 +46,22 @@ class ContadorLayout(BoxLayout):
 
         # Configuración del layout principal
         self.orientation = "vertical"  # Widgets apilados verticalmente
-        self.padding = 30              # Margen interno de 30 píxeles
-        self.spacing = 20              # Espacio de 20 píxeles entre widgets
+        self.padding = 30  # Margen interno de 30 píxeles
+        self.spacing = 20  # Espacio de 20 píxeles entre widgets
 
         # ── Label grande que muestra el número del contador ──
         self.label_contador = Label(
-            text="0",                          # Texto inicial
-            font_size=72,                       # Tamaño de fuente grande
-            bold=True,                          # Texto en negrita
-            color=(0.2, 0.8, 0.4, 1),          # Color verde en RGBA
+            text="0",  # Texto inicial
+            font_size=72,  # Tamaño de fuente grande
+            bold=True,  # Texto en negrita
+            color=(0.2, 0.8, 0.4, 1),  # Color verde en RGBA
         )
 
         # ── Label pequeño con texto descriptivo ──
         self.label_info = Label(
             text="Clics realizados",
             font_size=20,
-            color=(0.7, 0.7, 0.7, 1),          # Color gris claro
+            color=(0.7, 0.7, 0.7, 1),  # Color gris claro
         )
 
         # ── Fila de botones (layout horizontal dentro del vertical) ──
@@ -69,7 +69,7 @@ class ContadorLayout(BoxLayout):
         # - size_hint_y=None: desactiva el tamaño proporcional vertical.
         # - height=60: altura fija de 60 píxeles para la fila.
         fila_botones = BoxLayout(
-            orientation="horizontal",
+            orientation="vertical",
             size_hint_y=None,
             height=60,
             spacing=10,
@@ -142,11 +142,11 @@ class ContadorLayout(BoxLayout):
         # Esto demuestra cómo la interfaz puede reaccionar dinámicamente
         # al estado de la aplicación.
         if valor == 0:
-            self.label_contador.color = (0.2, 0.8, 0.4, 1)   # Verde
+            self.label_contador.color = (0.2, 0.8, 0.4, 1)  # Verde
         elif valor < 10:
-            self.label_contador.color = (1, 0.8, 0.2, 1)      # Amarillo
+            self.label_contador.color = (1, 0.8, 0.2, 1)  # Amarillo
         else:
-            self.label_contador.color = (0.9, 0.3, 0.3, 1)    # Rojo
+            self.label_contador.color = (0.9, 0.3, 0.3, 1)  # Rojo
 
 
 # Clase de la aplicación: simplemente devuelve el layout personalizado.
