@@ -230,4 +230,6 @@ $RECYCLE.BIN/
 *.json
 *.txt
 
-PARCIAL/clima.py
+PARCIAL/
+PARCIAL2/
+cache/
